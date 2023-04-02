@@ -1,0 +1,32 @@
+<%- include('header') %>
+<%- include('navbar') %>
+<%- include('search') %>
+<div class="qp-container">
+    <div class="qp-content" style="height:fit-content ;margin: 156px auto 20px auto;width: 90%;">
+        <form action="/" method="post" class="contributionForm" enctype="multipart/form-data">
+            <div class="header-contribute">
+                <div class="header-body">
+                    <div class="header-contribute-left">
+                        <div class="header-contribute-left-divinput">
+                            <input type="number" class="header-contribute-left-divinput-input" placeholder="Enter the year" name="year" required>
+                        </div>
+                        <div class="header-contribute-left-divinput"><br>
+                            <input type="text" class="header-contribute-left-divinput-input" placeholder="Enter the exam code" name="examCode" required>
+                        </div>
+                    </div>
+                    <div class="header-contribute-right">
+                        <div class="header-contribute-divfileselect">
+                            <img src="/route/images/cnamelogo.jpg" id="previewImage" class="preview-image" style="padding: 20px;border-radius: 30px;">
+                            <input type="file" class="header-contribute-divfileselect-input" name="uploaded_file" required>
+                        </div>
+                        <div class="header-contribute-divsubmit">
+                            <button type="submit" class="header-contribute-divsubmit-submit">Contribute</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- <%- include('notice') %> -->
+</div>
+<%- include('footer') %>

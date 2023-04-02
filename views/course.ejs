@@ -1,0 +1,21 @@
+<%- include('header') %>
+<%- include('navbar') %>
+<%- include('search') %>
+<!-- <script src="/route/bubble-paint.js"></script> -->
+
+<p class="course-nav"><a href="/" class="course-nav-a">Home &gt;</a><a href="/cse" class="course-nav-a"><%= cName %> &gt;</a></p>
+<div class="semester-content">
+    <div class="qp-container" style="overflow: auto;">
+        <div class="courses">
+            <% for(var i=1;i<=8;i++){ %>
+                <div class="course-sem">
+                    <h1 style="font-family: sans-serif;font-weight: bold;background-color: #55a3ed;padding: 5%;color:#2b3460;border-radius: 2px;margin: 6px;border: 0.5px solid white;margin-bottom: 30px;">Semester-<%= i %></h2>
+                        <a class="course-sem-btn" href="/cse/sem<%= i %>">View</a>
+                </div>
+                <% } %>
+        </div>
+        <%- include('notice') %>
+    </div>
+    
+</div>
+<%- include('footer') %>

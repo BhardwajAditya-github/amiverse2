@@ -1,0 +1,20 @@
+<div class="year1QP">
+  <h3 class="year1QP-head">Available Study Notes</h3>
+  <div class="year1QP-content">
+
+    <% for(var i=0;i<sr3Array.length;i++){ var paper = sr3Array[i] %>
+
+    <div class="sr3-mycard">
+        <p class="sr3-mycard-img">Amiverse</p>
+        <div class="card-body">
+          <p><b><%= paper.pdfName.substring(0,paper.pdfName.indexOf(".pdf")).toUpperCase() %></b></p>
+          <br><hr><br><br>
+          <a class="course-sem-btn" href="/studymaterial">View</a>
+        </div>
+      </div>
+
+    <% } %>
+
+    <a href="/studymaterial" class="viewAll-a"><div class="searchRenderer-viewAll2"><img class="material-symbols-outlined viewAll-icon" src="https://amiversestorage.blob.core.windows.net/amiverse0icons/more.png"></div></a>
+</div>
+</div>

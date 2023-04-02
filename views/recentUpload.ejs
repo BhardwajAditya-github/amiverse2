@@ -1,0 +1,20 @@
+<%- include('header') %>
+<%- include('navbar') %>
+<%- include('search') %>
+<!-- <%- include('year-filter') %> -->
+
+<div class="ru-enhanced">
+    <% if(count == 0){ %>
+        <div class="nomatch"><p class="nomatch-p"><%= message %></p></div>
+    <% } %>
+        <% for(var i=0;i<count;i++){ var paper=paperArray[i] %>
+        <div class="ruec-paper">
+            <img src="/route/images/qp.jpg" class="ruecp-img-image" alt="Network error">
+            <div class="ruecp-right">
+                <div class="reucp-head"><h4 class="reucp-head-h"><%= paper.pdfName.substring(0,paper.pdfName.indexOf(".pdf")) %></h4></div>
+                <a href="<%= paper.url %>" class="reucp-btn-a"><div class="reucp-btn">View Paper</div></a>
+            </div>
+        </div>
+        <% } %>
+</div>
+<%- include('footer') %>

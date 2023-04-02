@@ -1,0 +1,25 @@
+<%- include('header') %>
+<%- include('navbar') %>
+<%- include('search') %>
+<div class="qp-container">
+    <div class="qp">
+        <!-- <div class="qp-logo"><img src="/route/images/cnamelogo.jpg" alt="" class="qp-logo-img"></div> -->
+        <div class="qp-content">
+            <div class="qp-content-qpimg"><img src="/route/images/qp-X.jpg" alt="Network error" class="qp-content-qpimage"></div>
+            <div class="qp-content-title"><h1 class="qp-content-title-h"><%= title.toUpperCase() %></h1></div>
+            <div class="qp-content-info">
+                <p class="paper-heading-p">This section contains previous year paper for subject <b><%= title %></b> with Exam Code <%= examCode %>.
+                    The paper is from year <%= year %>. The Question Paper follows the pattern by Amity University. 
+                </p><br>
+                <p class="paper-heading-p2">You can view the Question Paper for free on site. Please create account for downloading the paper.</p>
+            </div>
+            <div class="qp-content-date"><p class="qp-content-date-p"><%= date %></p></div>
+            <div class="qp-content-btn"><button type="submit" class="qp-content-btn-down">Download</button></div>
+        </div>
+    </div>
+    <div class="qp-not" style="padding-top: 120px;width: 40%;">
+        <%- include('notice') %>
+    </div>
+</div>
+    
+<%- include('footer') %>

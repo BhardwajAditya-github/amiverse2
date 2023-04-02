@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script type="text/javascript">
+    function showNav(){
+        let el = document.getElementById("myNavbar");
+        if(el.style.display.length == 0 || el.style.display.length == 4){el.style.display = "block";}
+        else{el.style.display = "none";}
+    }
+    </script>
+
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+    <link href="/route/css/styles.css" rel="stylesheet">
+    <title>Amiverse</title>
+</head>
+<body onload="yearFilterShow()">

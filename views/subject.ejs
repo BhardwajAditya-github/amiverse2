@@ -1,0 +1,50 @@
+<%- include('header') %>
+<%- include('navbar') %>
+<%- include('search') %>
+<div class="semester-content">
+    <div class="semester-courses subject-custom">
+        <h1 class="semester-courses-h1"><%= subName.toUpperCase() %></h1>
+    <div class="courses semester-courses" style="justify-content: left;display: block;padding-top: 0px;">
+        <p class="semester-courses-p">In this section you will find study material for the subject <%= subName %>. It includes Hand-written notes, Video Links 
+            and question papers from different years.</p>
+            <ul>
+                <li class="semester-courses-p">Hand-written notes</li>
+                <li class="semester-courses-p">Previous year question papers.</li>
+                <li class="semester-courses-p">Video Links</li>
+            </ul>
+            <br>
+        <p style="font-size: 22px;font-weight: bold;text-align: center;margin: 10px auto;">Notes</p>
+        <div class="subject-btns">
+            <form method="post" action="/notes">
+                <input style="display: none;" name="dfname" value=<%= subName.replace(' ','_') %>>
+                <button type="submit" class="subject-view-a"><div class="button-view-final"><span style="padding-left: 10px;font-size: 24px;">View</span></div></button><br><br>
+                <button type="submit" class="subject-view-a"><div class="button-view-final button-view-final-download"><span style="font-size: 24px;">Download</span></div></button>
+            </form>
+        </div>
+        <br>
+        <hr>
+        <h1 style="margin: 20px auto;"><u>Previous Year Question Papers</u></h1>
+        <div class="searchRenderer-content">
+            <% for(var i = 0;i<paperArray.length;i++){ var paper = paperArray[i]; %>
+                <a href="/<%=paper.title %>" class="searchRenderer-content-a">
+                    <div class="searchRenderer-content-paper">
+                        <div class="sR-c-p-date"><p class="date-p" style="text-align:center;margin-top:10px;"><%= paper.date %></p></div>
+                        <div class="sR-c-p-img"><p class="sR-c-p-amiverse">Amiverse</p></div>
+                        <div class="sR-c-p-title"><p class="paper-title-p"><%= paper.pdfName.substring(0,paper.pdfName.indexOf(".pdf")).toUpperCase() %></p></div>
+                    </div>
+                </a>    
+                <% } %>
+        </div>
+        <hr>
+        <h3 style="margin-bottom: 20px;"><u>Videos</u></h3>
+        <% for(var i = 0;i<videoData.length;i++){ var video = videoData[i]; %>
+            <a><div class="video-link"><img src=<%= video.snippet.thumbnails.medium.url %> class="video-img"></div></a>
+        <% }; %>
+
+        <iframe class="video-link" src="https://www.youtube-nocookie.com/embed/WSctd-KdTIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="video-link" src="https://www.youtube-nocookie.com/embed/8TAimywq62U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    </div>
+    <%- include('notice') %>
+</div>
+<%- include('footer') %>

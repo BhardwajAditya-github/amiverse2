@@ -1,0 +1,18 @@
+<%- include('header') %>
+<%- include('navbar') %>
+<%- include('search') %>
+  <div class="searchRenderer" style="padding-top: 150px;">
+    <div class="searchRenderer-content">
+        <% for(var i = 0;i<paperArray.length;i++){ var paper = paperArray[i]; %>
+        <a href="<%= paper.url %>" class="searchRenderer-content-a">
+            <div class="searchRenderer-content-paper">
+                <div class="sR-c-p-date"><p class="date-p" style="text-align:center;margin-top:10px;"><%= paper.date %></p></div>
+                <div class="sR-c-p-img"><p class="sR-c-p-amiverse">Amiverse</p></div>
+                <div class="sR-c-p-title"><p class="paper-title-p"><%= paper.pdfName.substring(0,paper.pdfName.indexOf(".pdf")).toUpperCase() %></p></div>
+            </div>
+        </a>    
+        <% } %>
+    </div>
+</div>
+
+  <%- include('footer') %>

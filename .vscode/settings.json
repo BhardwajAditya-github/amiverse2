@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/e1d43b07-84e8-4507-b99e-681faaa59923/AppServices/subscriptions/e1d43b07-84e8-4507-b99e-681faaa59923/resourceGroups/Amiverse-resourcegroup/providers/Microsoft.Web/sites/Amiverse-HUB",
+    "appService.deploySubpath": "."
+}

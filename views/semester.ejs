@@ -1,0 +1,26 @@
+<%- include('header') %>
+<%- include('navbar') %>
+<%- include('search') %>
+<div class="semester-content">
+    <div class="courses semester-courses">
+        <% subjects.forEach(function(subject){ %>
+            <div class="semester-subject">
+                <h2 style="padding: 10px;background-color: #0c2d4c;color:whitesmoke;"><%= subject.toUpperCase() %></h2>
+                <hr>
+                <p style="font-size: 18px;background-color: #e8e8e8;padding: 10px;margin-bottom: 0px;font-family: sans-serif">In this section you will find study material for the subject <%= subject %>. It includes Hand-written notes, Video Links 
+                and question papers from different years.
+                <ul class="semester-content-ul">
+                    <li>Hand-written notes</li>
+                    <li>Previous year question papers.</li>
+                    <li>Video Links</li>
+                </ul>
+            </p>
+            <form method="post" action="/study/<%= subject.replace(' ','-') %>">
+                <button type="submit" class="btn-view">View</button>
+            </form>
+            </div>
+            <% }) %>
+    </div>
+    <%- include('notice') %>
+</div>
+<%- include('footer') %>
