@@ -1,6 +1,6 @@
 <div class="searchRenderer">
     <div class="searchRenderer-content">
-        <% for(var i=0;i<count;i++){ var paper=paperArray[i];%>
+        <% for(var i=0;i<count;i++){ var paper=paperArray[i]; if(paper !==undefined){ %>
             <a href="<%= paper.url %>" class="searchRenderer-content-a">
                 <div class="searchRenderer-content-paper">
                     <div class="sR-c-p-date">
@@ -18,6 +18,6 @@
                     </div>
                 </div>
             </a>
-            <% } %>
+            <% }} %>
     </div>
 </div>
